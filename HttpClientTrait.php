@@ -518,7 +518,7 @@ trait HttpClientTrait
             } else {
                 $i = strpos($path, '/', 1) ?: \strlen($path);
                 $result .= substr($path, 0, $i);
-                $path = substr($path, $i);
+                $path = strval(substr($path, $i));
             }
         }
 
